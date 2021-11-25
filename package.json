@@ -1,5 +1,5 @@
 {
-  "name": "treefarmer",
+  "name": "treefarmer.js",
   "version": "1.0.0",
   "description": "Tree Farmer API Wrapper",
   "main": "build/index.js",
@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/TreeFarmer/treefarmer.js#readme",
   "keywords": [
+    "api",
     "treefarmer",
-    "api"
+    "wrapper"
   ],
   "dependencies": {
     "discord-api-types": "^0.24.0",

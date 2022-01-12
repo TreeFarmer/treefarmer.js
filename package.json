@@ -1,6 +1,6 @@
 {
 	"name": "treefarmer.js",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Tree Farmer API Wrapper",
 	"main": "build/index.js",
 	"types": "build/index.d.ts",

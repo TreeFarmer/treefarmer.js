@@ -21,7 +21,7 @@ type BaseResponse = {
   /**
    * The data being fetched
    */
-  readonly data: CutterData | FarmData | PlotData | TreeData | StorageData | UserData | VehicleData
+  readonly data: CutterData | FarmData | PlotData | TreeData | FarmStorageData | UserData | VehicleData
 }
 
 export interface CutterResponse extends BaseResponse {
@@ -41,7 +41,7 @@ export interface TreeResponse extends BaseResponse {
 }
 
 export interface StorageResponse extends BaseResponse {
-  readonly data: StorageData
+  readonly data: FarmStorageData
 }
 
 export interface VehicleResponse extends BaseResponse {
@@ -76,7 +76,7 @@ export type PlotData = {
   readonly growthSpeed: number
 }
 
-export type StorageData = {
+export type FarmStorageData = {
   readonly capacity: number
   readonly cost: number
   readonly level: number

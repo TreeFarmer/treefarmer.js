@@ -1,6 +1,6 @@
 import { Snowflake } from 'discord-api-types';
 import req, { HTTPMethod } from 'petitio';
-import { ClientOptions, CutterData, CutterResponse, FarmResponse, PlotResponse, TreeResponse, StorageResponse, VehicleResponse, UserResponse, FarmData, PlotData, StorageData, TreeData, UserData, VehicleData } from '../typings/index.js';
+import { ClientOptions, CutterData, CutterResponse, FarmResponse, PlotResponse, TreeResponse, StorageResponse, VehicleResponse, UserResponse, FarmData, PlotData, FarmStorageData, TreeData, UserData, VehicleData } from '../typings/index.js';
 
 export class Client {
   private readonly _fullResponse: boolean;
@@ -53,9 +53,9 @@ export class Client {
   /**
    * Get a storage or all storages
    * @param {string | number | undefined} search
-   * @returns {Promise<StorageResponse | StorageData | Error>}
+   * @returns {Promise<StorageResponse | FarmStorageData | Error>}
    */
-  public async getStorage(search?: string | number): Promise<StorageResponse | StorageData | Error> {
+  public async getStorage(search?: string | number): Promise<StorageResponse | FarmStorageData | Error> {
     const res: StorageResponse = await this.request('GET', '/storages', null, { search: search ?? null });
 
     if (res.error) throw new Error(res.message);
